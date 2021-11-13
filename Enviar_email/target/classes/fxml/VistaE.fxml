@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="VBox_View" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <GridPane prefHeight="400.0" prefWidth="600.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="496.0" minWidth="10.0" prefWidth="495.0" />
+          <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="105.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="76.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="127.0" minHeight="0.0" prefHeight="25.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="127.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="127.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="127.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="336.0" minHeight="10.0" prefHeight="252.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="LabelSTMP" text="Servidor STMP: " />
+            <Label fx:id="Label_SSL" text="Usar conexión SSL: " GridPane.rowIndex="1" />
+            <Label fx:id="Label_Remitente" text="Remitente (From): " GridPane.rowIndex="2" />
+            <Label fx:id="Label_Destinatario" text="Destinatario (To): " GridPane.rowIndex="3" />
+            <Label fx:id="Label_Asunto" text="Asunto (Subject): " GridPane.rowIndex="4" />
+            <TextArea fx:id="TExtArea_Mensaje" prefHeight="200.0" prefWidth="200.0" promptText="Mensaje" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" />
+               </GridPane.margin>
+            </TextArea>
+            <TextField fx:id="TextField_IP_Servidor" promptText="Nombre o IP del Sevidor">
+               <GridPane.margin>
+                  <Insets left="100.0" right="100.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="TextField_Remitente" promptText="Remitente del email" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="100.0" right="140.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="TextField_Destinatario" promptText="Destinatario del email" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="100.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="TextField_Asunto" promptText="Asunto" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="100.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="TextField_Puerto" promptText="Puerto">
+               <GridPane.margin>
+                  <Insets left="400.0" />
+               </GridPane.margin>
+            </TextField>
+            <CheckBox fx:id="CheckBox_SSL" mnemonicParsing="false" onAction="#Action_Check_SSL" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="110.0" />
+               </GridPane.margin>
+            </CheckBox>
+            <Button fx:id="Button_Enviar" mnemonicParsing="false" onAction="#Action_Enviar" text="Enviar" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="Button_Vaciar" mnemonicParsing="false" onAction="#Action_Vaciar" text="Vaciar" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="Button_Cerrar" mnemonicParsing="false" onAction="#Action_Cerrar" text="Cerrar" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Button>
+            <PasswordField fx:id="PassField_Contrasena" promptText="Contraseña" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="360.0" />
+               </GridPane.margin>
+            </PasswordField>
+         </children>
+      </GridPane>
+   </children>
+</VBox>
