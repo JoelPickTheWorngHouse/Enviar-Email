@@ -16,7 +16,7 @@ private Controller control;
 		control=new Controller();
 		
 		Scene secen=new Scene(control.getView());
-		primaryStage.setTitle("Calculadora FXML");
+		primaryStage.setTitle("Enviar email");
 		primaryStage.setScene(secen);
 		primaryStage.getIcons().add(new Image("iconito.png"));
 		primaryStage.show();
